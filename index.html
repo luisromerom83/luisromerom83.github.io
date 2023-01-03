@@ -27,8 +27,8 @@ Http.onreadystatechange = (e) => {
 
   //document.getElementById("respuesta").innerHTML = Http.responseText;
   const resp=JSON.parse(Http.responseText)
-  resp.data.movies.forEach(element => {
-    document.getElementById("botones").innerHTML += "<button>" + resp.data.movies[i].id+i + "</button>";
+  resp.data.movies.forEach((element,index) => {
+    document.getElementById("botones").innerHTML += "<button>" + resp.data.movies[index].id+index + "</button>";
   });
     
   
