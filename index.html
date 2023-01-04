@@ -32,8 +32,8 @@ Http.onreadystatechange = (e) => {
 resp.data.movies[index].torrents.forEach((element,indexT)=>
 {
   
-  document.getElementById("botones").innerHTML += "<button>" + resp.data.movies[index].title + " "+resp.data.movies[index].torrents[indexT].quality+"</button><br>";
-
+  document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  <button type="submit" formaction="https://www.w3docs.com">Click me</button>
 
 }
 )
