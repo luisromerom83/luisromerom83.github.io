@@ -7,7 +7,7 @@
 <p>The onclick event triggers a  function when an element is clicked on.</p>
 <p>Click to trigger a function that will output "Hello World":</p>
 <div id="demo"></div>
-<div id="Index"><h1>Links OK</h1></div>
+<div id="Index"><h1>Test fixed button OK</h1></div>
 <div id="botones"></div>
 <div id="respuesta"></div>
 <button onclick="myFunction()">Click me</button>
@@ -32,7 +32,8 @@ Http.onreadystatechange = (e) => {
 resp.data.movies[index].torrents.forEach((element,indexT)=>
 {
   
-  document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  //document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  document.getElementById("botones").innerHTML='  <button type="submit" formaction="https://www.w3docs.com">Click me</button>'
   //<button type="submit" formaction="https://www.w3docs.com">Click me</button>
 
 }
