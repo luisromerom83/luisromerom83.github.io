@@ -8,7 +8,7 @@
 <p>Click to trigger a function that will output "Hello World":</p>
 Movie: <input type="text" id="movie">
 <div id="demo"></div>
-<div id="Index"><h1>Callfunction</h1></div>
+<div id="Index"><h1>CallfunctionIDURL</h1></div>
 <div id="botones"></div>
 <div id="respuesta"></div>
 <button onclick="myFunction()">Click me</button>
@@ -34,7 +34,7 @@ resp.data.movies[index].torrents.forEach((element,indexT)=>
 {
   
   //document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
-  document.getElementById("botones").innerHTML += '<button onclick="alertId(this.id)" >' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  document.getElementById("botones").innerHTML += '<button id="'+resp.data.movies[index].torrents[indexT].url+'" onclick="alertId(this.id)" >' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
   //document.getElementById("botones").innerHTML += '<a href="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</a><br>';
   //document.getElementById("botones").innerHTML='<form>  <button type="submit" formaction="https://www.w3docs.com">ABRIR</button></form>'
   //<button type="submit" formaction="https://www.w3docs.com">Click me</button>
