@@ -6,8 +6,9 @@
 
 <p>The onclick event triggers a  function when an element is clicked on.</p>
 <p>Click to trigger a function that will output "Hello World":</p>
+Movie: <input type="text" id="movie">
 <div id="demo"></div>
-<div id="Index"><h1>AHREF</h1></div>
+<div id="Index"><h1>Input</h1></div>
 <div id="botones"></div>
 <div id="respuesta"></div>
 <button onclick="myFunction()">Click me</button>
@@ -19,7 +20,7 @@ function myFunction() {
   //document.getElementById("demo").innerHTML = "Hello World";
  try{
   const Http = new XMLHttpRequest();
-const url='https://yts.mx/api/v2/list_movies.jsonp?quality=1080&query_term=Pirate';
+const url='https://yts.mx/api/v2/list_movies.jsonp?quality=1080&query_term='+document.getElementById("movie").value;
 Http.open("GET", url);
 Http.send();
 document.getElementById("botones").innerHTML=""
