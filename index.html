@@ -12,7 +12,7 @@ Movie: <input type="text" id="movie">
 <div id="botones"></div>
 <div id="respuesta"></div>
 <button onclick="myFunction()">Click me</button>
-
+<button id="button_one" style="width: 100px; height:40px; margin-right: 10px;" onclick="alertId(this.id)">1</button>
 
 
 <script>
@@ -26,15 +26,15 @@ Http.send();
 document.getElementById("botones").innerHTML=""
 Http.onreadystatechange = (e) => {
 
-  document.getElementById("respuesta").innerHTML = Http.responseText;
+  //document.getElementById("respuesta").innerHTML = Http.responseText;
   const resp=JSON.parse(Http.responseText)
   resp.data.movies.forEach((element,index) => {
 
 resp.data.movies[index].torrents.forEach((element,indexT)=>
 {
   
-  //document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
-  document.getElementById("botones").innerHTML += '<a href="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</a><br>';
+  document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  //document.getElementById("botones").innerHTML += '<a href="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</a><br>';
   //document.getElementById("botones").innerHTML='<form>  <button type="submit" formaction="https://www.w3docs.com">ABRIR</button></form>'
   //<button type="submit" formaction="https://www.w3docs.com">Click me</button>
 
@@ -52,6 +52,12 @@ resp.data.movies[index].torrents.forEach((element,indexT)=>
 catch (error) {
     console.log(error.message);
   }
+
+
+}
+
+function alertId(id){
+  document.getElementById("demo").innerHTML = id;
 
 
 }
