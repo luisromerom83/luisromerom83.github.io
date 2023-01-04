@@ -7,7 +7,7 @@
 <p>The onclick event triggers a  function when an element is clicked on.</p>
 <p>Click to trigger a function that will output "Hello World":</p>
 <div id="demo"></div>
-<div id="Index"><h1>Test fixed button OK</h1></div>
+<div id="Index"><h1>ErrorK</h1></div>
 <div id="botones"></div>
 <div id="respuesta"></div>
 <button onclick="myFunction()">Click me</button>
@@ -17,7 +17,7 @@
 <script>
 function myFunction() {
   //document.getElementById("demo").innerHTML = "Hello World";
-  
+ try{
   const Http = new XMLHttpRequest();
 const url='https://yts.mx/api/v2/list_movies.json?quality=1080&query_term=Pirate';
 Http.open("GET", url);
@@ -39,15 +39,18 @@ resp.data.movies[index].torrents.forEach((element,indexT)=>
 }
 )
 
+  }
+);
+    
+  
 
-    
-  });
-    
-  
-  
-  //document.getElementById("respuesta").innerHTML = resp.data.movies[0].title;
-  //console.log(Http.responseText)
 }
+}
+catch (error) {
+    console.log(error.message);
+  }
+
+
 }
 </script>
 
