@@ -22,7 +22,7 @@ function myFunction() {
 const url='https://yts.mx/api/v2/list_movies.jsonp?quality=1080&query_term=Pirate';
 Http.open("GET", url);
 Http.send();
-document.getElementById("botones").innerHTML=""
+document.getElementById("botones").innerHTML="<form>"
 Http.onreadystatechange = (e) => {
 
   document.getElementById("respuesta").innerHTML = Http.responseText;
@@ -32,8 +32,8 @@ Http.onreadystatechange = (e) => {
 resp.data.movies[index].torrents.forEach((element,indexT)=>
 {
   
-  //document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
-  document.getElementById("botones").innerHTML='<form>  <button type="submit" formaction="https://www.w3docs.com">ABRIR</button></form>'
+  document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
+  //document.getElementById("botones").innerHTML='<form>  <button type="submit" formaction="https://www.w3docs.com">ABRIR</button></form>'
   //<button type="submit" formaction="https://www.w3docs.com">Click me</button>
 
 }
@@ -45,6 +45,7 @@ resp.data.movies[index].torrents.forEach((element,indexT)=>
   
 
 }
+document.getElementById("botones").innerHTML +="</form>"
 }
 catch (error) {
     console.log(error.message);
