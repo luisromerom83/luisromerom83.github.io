@@ -7,7 +7,7 @@ function myFunction() {
   Http.send();
   document.getElementById("botones").innerHTML=""
   Http.onreadystatechange = (e) => {
-  
+    
     //document.getElementById("respuesta").innerHTML = Http.responseText;
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
