@@ -16,7 +16,7 @@
 
 <script>
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
+  //document.getElementById("demo").innerHTML = "Hello World";
   
   const Http = new XMLHttpRequest();
 const url='https://yts.mx/api/v2/list_movies.json?quality=1080&query_term=Pirate';
@@ -25,7 +25,7 @@ Http.send();
 document.getElementById("botones").innerHTML=""
 Http.onreadystatechange = (e) => {
 
-  //document.getElementById("respuesta").innerHTML = Http.responseText;
+  document.getElementById("respuesta").innerHTML = Http.responseText;
   const resp=JSON.parse(Http.responseText)
   resp.data.movies.forEach((element,index) => {
 
