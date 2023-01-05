@@ -3,7 +3,17 @@ import config from "../config";
 
 //valor de folder traido desde archivo config y este a su vez de variables de entorno (.env)
 const watchfolder=config.watchmovies;
-
+const mensajeget=async (req,res)=>{
+    try{
+    
+        res.json("Respondiendo para get"+ req.body);
+        console.log("Mensaje get")      
+    } catch (error) {
+    res.status (500);
+    res.send(error.message);
+    
+    }
+    }
 
 const savetorrent=async (req,res)=>{
 try{
@@ -40,7 +50,7 @@ res.send(error.message);
 };
 export const methods=
 {
-savetorrent
+savetorrent,mensajeget
 };
 
 

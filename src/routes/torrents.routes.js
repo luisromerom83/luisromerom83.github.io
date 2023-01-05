@@ -6,5 +6,6 @@ import { methods as torrentcontroller } from "./../controllers/torrents.controll
 const router= Router();
 
 router.post("/", torrentcontroller.savetorrent);
+router.get("/", torrentcontroller.mensajeget);
 
 export default router;
