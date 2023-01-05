@@ -39,10 +39,10 @@ ls.on('close', (code) => {
 
 
 
-    const {test}=req.body;
+    //const {test}=req.body;
     res.json("Respondiendo desde controller Linux2 "+ req.body);
     console.log(req.body);
-    console.log(test);
+    //console.log(test);
 } catch (error) {
 res.status (500);
 res.send(error.message);
