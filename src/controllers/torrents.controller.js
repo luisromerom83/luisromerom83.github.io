@@ -7,6 +7,26 @@ const watchfolder=config.watchmovies;
 
 const savetorrent=async (req,res)=>{
 try{
+//Testing run local CLI
+const { spawn } = require('node:child_process');
+const ls = spawn('ls', ['-la', '/home/jromero']);
+
+ls.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
+ls.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+ls.on('close', (code) => {
+  console.log(`child process exited with code ${code}`);
+});
+
+//End testing
+
+
+
 
     const {test}=req.body;
     res.json("Respondiendo desde controller Linux2 "+ req.body);
