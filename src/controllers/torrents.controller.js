@@ -17,9 +17,10 @@ const mensajeget=async (req,res)=>{
 
 const savetorrent=async (req,res)=>{
 try{
+    const {test}=req.body;
 //Testing run local CLI
 const { spawn } = require('node:child_process');
-const ls = spawn('ls', ['-la', '/home/jromero']);
+const ls = spawn('curl', [test,'--output', '/home/jromero/Descargas/watch/torrent.torrent']);
 
 ls.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
