@@ -9,7 +9,7 @@ const savetorrent=async (req,res)=>{
 try{
 
     const {test}=req.body;
-    res.json("Respondiendo desde controller Linux "+ req.body);
+    res.json("Respondiendo desde controller Linux2 "+ req.body);
     console.log(req.body);
     console.log(test);
 } catch (error) {
