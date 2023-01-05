@@ -46,7 +46,7 @@ function myFunction() {
     xhr.open("POST", "//quadienttux.ddns.net:4000/api/torrents", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
-        test: "donexxx"
+        test: id
     }));
     
   
