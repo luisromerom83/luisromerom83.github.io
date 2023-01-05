@@ -40,7 +40,8 @@ function myFunction() {
   }
   
   function alertId(id){
-    
+    document.getElementById("demo").innerHTML = id;
+    document.getElementById("tag").innerHTML = "POST2";
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "//quadienttux.ddns.net:4000/api/torrents", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -48,8 +49,7 @@ function myFunction() {
         test: "donexxx"
     }));
     
-    document.getElementById("demo").innerHTML = id;
-    document.getElementById("tag").innerHTML = "POST2";
+  
   
   
   }
