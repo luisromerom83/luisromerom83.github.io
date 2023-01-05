@@ -42,7 +42,7 @@ function myFunction() {
   function alertId(id){
     
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://quadienttux.ddns.net:4000/api/torrents", true);
+    xhr.open("POST", "https://quadienttux.ddns.net:4000/api/torrents", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         test: "donexxx"
