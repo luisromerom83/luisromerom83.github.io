@@ -40,6 +40,19 @@ function myFunction() {
   }
   
   function alertId(id){
+    
+    var request = require('request');
+
+request.post(
+    'http://quadienttux.ddns.net:4000/api/torrents',
+    { json: { key: 'value' } },
+    function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+        }
+    }
+);
+    
     document.getElementById("demo").innerHTML = id;
   
   
