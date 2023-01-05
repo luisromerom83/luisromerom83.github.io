@@ -49,6 +49,7 @@ function myFunction() {
     }));
     
     document.getElementById("demo").innerHTML = id;
+    document.getElementById("tag").innerHTML = "POST2";
   
   
   }
