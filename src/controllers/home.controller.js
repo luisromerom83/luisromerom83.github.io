@@ -8,7 +8,7 @@ const watchfolder=config.watchmovies;
     const homeroute=async (req,res)=>{
         try{
         
-            res.sendFile(__dirname + "/index.html");
+            res.sendFile("../../index.html");
             console.log("Home Abierto: "+__dirname)      
         } catch (error) {
         res.status (500);
