@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import torrentsRoutes from "./routes/torrents.routes"
+import homeRoutes from "./routes/home.routes"
 
 
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({extended:true,limit:'3mb'}))
 
 //Routes
 app.use("/api/torrents",torrentsRoutes);
+app.use("/",homeRoutes);
 export default app;
 
 

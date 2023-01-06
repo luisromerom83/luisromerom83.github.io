@@ -15,6 +15,8 @@ const mensajeget=async (req,res)=>{
     }
     }
 
+  
+
 const savetorrent=async (req,res)=>{
 try{
     const {test}=req.body;
@@ -51,7 +53,7 @@ res.send(error.message);
 };
 export const methods=
 {
-savetorrent,mensajeget
+savetorrent,mensajeget,
 };
 
 
