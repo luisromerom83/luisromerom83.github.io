@@ -10,7 +10,7 @@ const watchfolder=config.watchmovies;
         
             res.sendFile("/home/jromero/git/luisromerom83.github.io/index.html");
             console.log("Home Abierto: "+__dirname)      
-            console.log("Process "+process.cwd)   
+            console.log("File: "+__filename)   
         } catch (error) {
         res.status (500);
         res.send(error.message);
