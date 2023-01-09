@@ -9,8 +9,9 @@ const watchfolder=config.watchmovies;
     const functionsroute=async (req,res)=>{
         try{
         
+            console.log("Archivo reqiested: "+path.join(__dirname,"src",req.url))      
             res.sendFile(path.join(__dirname,"src",req.url));
-            console.log("Archivo: "+path.join(__dirname,"src",req.url))      
+            
         } catch (error) {
         res.status (500);
         res.send(error.message);
