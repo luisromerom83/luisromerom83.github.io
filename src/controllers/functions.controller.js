@@ -10,7 +10,7 @@ const watchfolder=config.watchmovies;
         try{
         
             console.log("Archivo reqiested: "+path.join(__dirname,"src",req.url))      
-            res.sendFile(path.join(__dirname,"src",req.url));
+            res.sendFile('/home/jromero/git/luisromerom83.github.io/src/funciones.js));
             
         } catch (error) {
         res.status (500);
