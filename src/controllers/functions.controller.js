@@ -10,7 +10,7 @@ const watchfolder=config.watchmovies;
         try{
         
             
-            console.dir("Regresando js file ";
+            console.dir("Regresando js file ");
             res.sendFile('/home/jromero/git/luisromerom83.github.io/'+req.baseUrl);
             
         } catch (error) {
