@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended:true,limit:'3mb'}))
 //Routes
 app.use("/api/torrents",torrentsRoutes);
 app.use("/",homeRoutes);
-app.use("/src",functionsRoutes);
+app.use("/src/funciones.js",functionsRoutes);
 export default app;
 
 
