@@ -12,7 +12,7 @@ const watchfolder=config.watchmovies;
             console.dir("Original URL: "+req.originalUrl) // '/admin/new?sort=desc'
             console.dir("Base URL: "+req.baseUrl) // '/admin'
             console.dir("PATH: "+req.path) // '/new'
-            res.sendFile('/home/jromero/git/luisromerom83.github.io/src/funciones.js');
+            res.sendFile('/home/jromero/git/luisromerom83.github.io/'+req.baseUrl);
             
         } catch (error) {
         res.status (500);
