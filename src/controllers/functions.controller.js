@@ -9,9 +9,8 @@ const watchfolder=config.watchmovies;
     const functionsroute=async (req,res)=>{
         try{
         
-            console.dir("Original URL: "+req.originalUrl) // '/admin/new?sort=desc'
-            console.dir("Base URL: "+req.baseUrl) // '/admin'
-            console.dir("PATH: "+req.path) // '/new'
+            
+            console.dir("Regresando js file ";
             res.sendFile('/home/jromero/git/luisromerom83.github.io/'+req.baseUrl);
             
         } catch (error) {
