@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import torrentsRoutes from "./routes/torrents.routes"
 import homeRoutes from "./routes/home.routes"
-import functionsRoutes from ".routes/functions.routes"
+import functionsRoutes from "./routes/functions.routes"
 
 
 
