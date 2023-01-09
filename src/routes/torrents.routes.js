@@ -4,7 +4,7 @@ import { methods as torrentcontroller } from "./../controllers/torrents.controll
 
 
 const router= Router();
-
+console.log("Entro a Torrents")
 router.post("/", torrentcontroller.savetorrent);
 router.get("/", torrentcontroller.mensajeget);
 
