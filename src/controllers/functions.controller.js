@@ -11,7 +11,7 @@ const watchfolder=config.watchmovies;
         
             
             console.dir("Regresando js file ");
-            res.sendFile('/home/jromero/git/luisromerom83.github.io/'+req.baseUrl);
+            res.sendFile(config.homedir+req.baseUrl);
             
         } catch (error) {
         res.status (500);

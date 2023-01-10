@@ -22,7 +22,7 @@ try{
     const {test}=req.body;
 //Testing run local CLI
 const { spawn } = require('node:child_process');
-const ls = spawn('curl', [test,'--output', '/home/jromero/Descargas/watch/torrent.torrent']);
+const ls = spawn('curl', [test,'--output', config.watchmovies+'torrent.torrent']);
 
 ls.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
