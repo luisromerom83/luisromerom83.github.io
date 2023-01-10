@@ -17,8 +17,8 @@ function myFunction() {
 
   
   Http.onreadystatechange = (e) => {
-    
-    document.getElementById('botones').innerHTML='';
+    let botones=document.getElementById('botones');
+    botones.innerHTML='';
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
       
@@ -27,8 +27,22 @@ function myFunction() {
     
     
    
-    document.getElementById('botones').innerHTML+='<div class="accordion" id="accordionExample"><div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2><div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample"><div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br><button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">Descargar</button></div></div></div></div>'
-
+    //Inicio accordion
+    botones.innerHTML+='<div class="accordion" id="accordionExample">';
+    //Inicio Header
+    botones.innerHTML+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">';
+    //Botón header
+    botones.innerHTML+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ';
+    //Texto botón header
+    botones.innerHTML+= resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2>';
+    //Inicio body
+    botones.innerHTML+='<div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample">';
+    //Contenido body
+    botones.innerHTML+='<div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br>';
+    //Botón de descarga
+    botones.innerHTML+='<button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">Descargar</button>';
+    //Fin accordion
+    botones.innerHTML+='</div></div></div></div>'
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
  //document.getElementById('botones').innerHTML+='</div><h2>Hola Div</h2>';
     
