@@ -46,7 +46,7 @@ function myFunction() {
     //Botón header
     botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+movieid+'" aria-expanded="false" aria-controls="collapse'+movieid+'">  ';
     //Texto botón header
-    botoneshtml+= resp.data.movies[index].title +' '+genres+' </button></h2>';
+    botoneshtml+= resp.data.movies[index].title +'         '+genres+' </button></h2>';
     //Inicio body
     botoneshtml+='<div id="collapse'+movieid+'" class="accordion-collapse collapse show" aria-labelledby="heading'+movieid+'" data-bs-parent="#accordionExample">';
     //Contenido body
