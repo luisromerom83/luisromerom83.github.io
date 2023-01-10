@@ -26,29 +26,39 @@ function myFunction() {
     botones.innerHTML='';
     let botoneshtml='';
     const resp=JSON.parse(Http.responseText)
+    
+    //Repite por película
+    
     resp.data.movies.forEach((element,index) => {
+      let movieid=resp.data.movies[index].id;
+      
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
+    //Inicio Items
+    botoneshtml+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+movieid+'">';
+    //Botón header
+    botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+movieid+'" aria-expanded="false" aria-controls="collapse'+movieid+'">  ';
+    //Texto botón header
+    botoneshtml+= resp.data.movies[index].title +'    </button></h2>';
+    //Inicio body
+    botoneshtml+='<div id="collapse'+movieid+'" class="accordion-collapse collapse show" aria-labelledby="heading'+movieid+'" data-bs-parent="#accordionExample">';
+    //Contenido body
+    botoneshtml+='<div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br>';
+      //Fin repite película
+    
+    
+    
+      //Repite por torrent 
   resp.data.movies[index].torrents.forEach((element,indexT)=>
   {
     
     
    
     
-    //Inicio Items
-    botoneshtml+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">';
-    //Botón header
-    botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ';
-    //Texto botón header
-    botoneshtml+= resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2>';
-    //Inicio body
-    botoneshtml+='<div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample">';
-    //Contenido body
-    botoneshtml+='<div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br>';
+    
     //Botón de descarga
-    botoneshtml+='<button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">Descargar</button>';
-    //Fin accordion
-    botoneshtml+='</div></div></div></div>';
+    botoneshtml+='<button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">'+resp.data.movies[index].torrents[indexT].quality+'</button>';
+    
 
     
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
@@ -58,7 +68,9 @@ function myFunction() {
   
   }
   )
-  botoneshtml+='</div>';
+  //Fin accordion
+  botoneshtml+='</div></div></div></div>';
+//  botoneshtml+='</div>';
   botones.innerHTML=botoneshtml;
     }
   );
