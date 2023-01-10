@@ -34,10 +34,10 @@ function myFunction() {
 
       //Get genres repeating subarray
       let genres="";
-      resp.data.movies[index].genres.forEach((element,indexG)){
+      resp.data.movies[index].genres.forEach((element,indexG)=>{
         genres+='<span class="badge text-bg-primary">'+resp.data.movies[index].genres.Value+'</span>'
       
-      }
+      });
       
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
