@@ -50,7 +50,7 @@ function myFunction() {
     //Fin accordion
     botoneshtml+='</div></div></div></div>';
 
-    botones=botoneshtml;
+    botones.innerHTML=botoneshtml;
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
  //document.getElementById('botones').innerHTML+='</div><h2>Hola Div</h2>';
     
