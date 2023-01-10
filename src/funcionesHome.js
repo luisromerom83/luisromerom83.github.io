@@ -33,7 +33,7 @@ function myFunction() {
       let movieid=resp.data.movies[index].id;
 
       //Get genres repeating subarray
-      let genres="";
+      let genres="<div>";
       resp.data.movies[index].genres.forEach((element,indexG)=>{
         //let genero=resp.data.movies[index].genres[0].Value;
         let genero=element;
@@ -73,7 +73,9 @@ function myFunction() {
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
                 genres+=`<p style="font-size: 15px;"><span class="badge bg-${color} text-${background} ">  ${genero} </span></p>`;
       
-      });
+      }
+      genres+="<div>"
+      );
       
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
