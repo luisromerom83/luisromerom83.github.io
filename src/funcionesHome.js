@@ -33,7 +33,7 @@ function myFunction() {
       let movieid=resp.data.movies[index].id;
 
       //Get genres repeating subarray
-      let genres='<div class="col">';
+      let genres='';
       resp.data.movies[index].genres.forEach((element,indexG)=>{
         //let genero=resp.data.movies[index].genres[0].Value;
         let genero=element;
@@ -71,7 +71,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<p style="font-size: 15px;"><span class="badge bg-${color} text-${background} ">  ${genero} </span></p>`;
+                genres+=`<div class="col" style="font-size: 15px;"><span class="badge bg-${color} text-${background} ">  ${genero} </span></div>`;
       
       }
       
@@ -79,8 +79,10 @@ function myFunction() {
       genres+="</div>"
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
+    //ROW
+    botoneshtml+='<div class="row align-items-start">'
     //Inicio Items
-    botoneshtml+='<div class="accordion-item" class="col"> <h2 class="accordion-header" id="heading'+movieid+'">';
+    botoneshtml+='<div class="accordion-item col" > <h2 class="accordion-header" id="heading'+movieid+'">';
     //Botón header
     botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+movieid+'" aria-expanded="false" aria-controls="collapse'+movieid+'">  ';
     //Texto botón header
@@ -114,7 +116,7 @@ function myFunction() {
   }
   )
   //Fin accordion
-  botoneshtml+='</div></div></div></div>';
+  botoneshtml+='</div></div></div></div></div>';
 //  botoneshtml+='</div>';
   botones.innerHTML=botoneshtml;
     }
