@@ -74,9 +74,9 @@ function myFunction() {
                 genres+=`<p style="font-size: 15px;"><span class="badge bg-${color} text-${background} ">  ${genero} </span></p>`;
       
       }
-      genres+="<div>"
-      );
       
+      );
+      genres+="</div>"
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
     //Inicio Items
