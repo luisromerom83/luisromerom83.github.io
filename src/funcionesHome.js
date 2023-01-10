@@ -1,7 +1,8 @@
-import * as fs from 'fs';
+
 
 
 function myFunction() {
+  import * as fs from 'fs';
   //const fs=require('fs')
     //document.getElementById("demo").innerHTML = "Hello World";
    try{
