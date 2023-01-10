@@ -71,7 +71,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<span class="badge bg-${color} text-${background} col-2">  ${genero} </span>`;
+                genres+=`<span class="badge bg-${color} text-${background} col-4">  ${genero} </span>`;
       
       }
       
@@ -82,7 +82,7 @@ function myFunction() {
     //ROW
     botoneshtml+='<div class="row align-items-start">'
     //Inicio Items
-    botoneshtml+='<div class="accordion-item col-1" > <h2 class="accordion-header" id="heading'+movieid+'">';
+    botoneshtml+='<div class="accordion-item col-4" > <h2 class="accordion-header" id="heading'+movieid+'">';
     //Botón header
     botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+movieid+'" aria-expanded="false" aria-controls="collapse'+movieid+'">  ';
     //Texto botón header
