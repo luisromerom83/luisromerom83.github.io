@@ -31,6 +31,13 @@ function myFunction() {
     
     resp.data.movies.forEach((element,index) => {
       let movieid=resp.data.movies[index].id;
+
+      //Get genres repeating subarray
+      let genres="";
+      resp.data.movies[index].genres.forEach((element,indexG)){
+        genres+='<span class="badge text-bg-primary">'+resp.data.movies[index].genres.Value+'</span>'
+      
+      }
       
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
@@ -39,7 +46,7 @@ function myFunction() {
     //Botón header
     botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+movieid+'" aria-expanded="false" aria-controls="collapse'+movieid+'">  ';
     //Texto botón header
-    botoneshtml+= resp.data.movies[index].title +'    <span class="badge text-bg-primary">Primary</span> </button></h2>';
+    botoneshtml+= resp.data.movies[index].title +' '+genres+' </button></h2>';
     //Inicio body
     botoneshtml+='<div id="collapse'+movieid+'" class="accordion-collapse collapse show" aria-labelledby="heading'+movieid+'" data-bs-parent="#accordionExample">';
     //Contenido body
