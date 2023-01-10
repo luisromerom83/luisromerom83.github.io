@@ -1,3 +1,6 @@
+const fs=require('fs')
+
+
 function myFunction() {
     //document.getElementById("demo").innerHTML = "Hello World";
    try{
@@ -64,7 +67,7 @@ console.log (document.getElementById('botones').innerHTML)
       console.log(error.message);
     }
   
-  
+  fs.writeFile('/home/jromero/log.txt',botones,(err)=>{if (err) throw err;})
   }
   
   function alertId(id){
