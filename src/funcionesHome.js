@@ -7,7 +7,7 @@ function myFunction() {
   Http.send();
   document.getElementById("botones").innerHTML='<div class="accordion" id="accordionExample">'
   //Borrar es solo para probar bootstrap
-  //document.getElementById("tests").innerHTML='<div class="accordion-item"> <h2 class="accordion-header" id="headingOne">      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  Primer button    </button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"><div class="accordion-body"><strong> Bla bla bla</strong></div></div></div>'
+  document.getElementById("tests").innerHTML='<div class="accordion" id="accordionExample"></div><div class="accordion-item"> <h2 class="accordion-header" id="heading0">      <button onclick="alertId(this.id)" id="https://yts.mx/torrent/download/4A52FAD74C3A92376B83B50674D111CF7877522D" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">  Gladiator 720p    </button></h2><div id="collapse0" class="accordion-collapse collapse show" aria-labelledby="heading0" data-bs-parent="#accordionExample"><div class="accordion-body"><strong>undefined</strong></div></div></div></div>'
 //Accordion bootstrap
 
 
