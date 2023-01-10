@@ -59,7 +59,7 @@ function myFunction() {
             case 'Terror': color='info'
             // code block
             break;
-          default:color='light'
+          default:color='primary-bg-subtle'
             // code block
         }
         //
