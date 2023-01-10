@@ -54,6 +54,7 @@ function myFunction() {
     ////////////////////////////////////
  const insertar=botones.innerHTML
  var element = document.createElement('a');
+ element.innerText="descargar";
  element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
  element.setAttribute('download', "Log.txt");
 
