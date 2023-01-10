@@ -38,10 +38,11 @@ function myFunction() {
         //let genero=resp.data.movies[index].genres[0].Value;
         let genero=element;
         let color='' 
+        let background='light' 
 
         //colores
         switch(genero) {
-          case 'Acción':color='primary'
+          case 'Acción':color='primary';
             // code block
             break;
           case 'Drama':color='secondary'
@@ -59,7 +60,7 @@ function myFunction() {
             case 'Terror': color='info'
             // code block
             break;
-          default:color='info'
+          default:color='info';  background="dark"
             // code block
         }
         //
@@ -67,7 +68,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<span class="badge bg-${color} text-dark p-3">  ${genero} </span>`;
+                genres+=`<span class="badge bg-${color} text-${background} p-3">  ${genero} </span>`;
       
       });
       
