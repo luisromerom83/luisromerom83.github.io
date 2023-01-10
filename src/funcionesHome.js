@@ -68,8 +68,11 @@ console.log (document.getElementById('botones').innerHTML)
     }
   
   fs.writeFile('/home/jromero/log.txt',botones,(err)=>{
-    if (err) 
-    throw err;
+    if (err) {
+      console.log("Falló al escribir el archivo");  
+      throw err;
+    
+  }
     else console.log("Archivo escrito");
   })
   }
