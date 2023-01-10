@@ -5,7 +5,6 @@ function myFunction() {
   const url='https://yts.mx/api/v2/list_movies.jsonp?quality=1080&query_term='+document.getElementById("movie").value;
   Http.open("GET", url);
   Http.send();
-  document.getElementById("botones").innerHTML='<div class="accordion" id="accordionExample">'
   //Borrar es solo para probar bootstrap
   //document.getElementById("tests").innerHTML='<div class="accordion-item"> <h2 class="accordion-header" id="headingOne">                                                                                                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  Primer button    </button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"><div class="accordion-body"><strong> Bla bla bla</strong></div></div></div>'
  
@@ -21,6 +20,8 @@ function myFunction() {
     //document.getElementById("respuesta").innerHTML = Http.responseText;
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
+      document.getElementById("botones").innerHTML='<div class="accordion" id="accordionExample">'
+
   
   resp.data.movies[index].torrents.forEach((element,indexT)=>
   {
@@ -39,7 +40,8 @@ console.log (document.getElementById('botones').innerHTML)
   
   }
   )
-  document.getElementById("botones").innerHTML +="</div>"
+  document.getElementById("botones").innerHTML='<div class="accordion" id="accordionExample">'
+
     }
   );
       
