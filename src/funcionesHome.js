@@ -35,8 +35,8 @@ function myFunction() {
       //Get genres repeating subarray
       let genres="";
       resp.data.movies[index].genres.forEach((element,indexG)=>{
-        let genero=resp.data.movies[index].genres[0].Value;
-        //let genero="comedia";
+        //let genero=resp.data.movies[index].genres[0].Value;
+        let genero=element;
                 genres+=`<span class="badge text-bg-primary"> ${genero} </span>`;
       
       });
