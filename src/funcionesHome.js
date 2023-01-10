@@ -24,6 +24,7 @@ function myFunction() {
   Http.onreadystatechange = (e) => {
     let botones=document.getElementById('botones');
     botones.innerHTML='';
+    let botoneshtml='';
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
       
@@ -33,41 +34,27 @@ function myFunction() {
     
    
     //Inicio accordion
-    botones.innerHTML+='<div class="accordion" id="accordionExample">';
+    botoneshtml+='<div class="accordion" id="accordionExample">';
     //Inicio Header
-    botones.innerHTML+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">';
+    botoneshtml+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">';
     //Botón header
-    botones.innerHTML+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ';
+    botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ';
     //Texto botón header
-    botones.innerHTML+= resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2>';
+    botoneshtml+= resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2>';
     //Inicio body
-    botones.innerHTML+='<div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample">';
+    botoneshtml+='<div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample">';
     //Contenido body
-    botones.innerHTML+='<div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br>';
+    botoneshtml+='<div class="accordion-body"><strong>'+ resp.data.movies[index].summary+'</strong><br>';
     //Botón de descarga
-    botones.innerHTML+='<button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">Descargar</button>';
+    botoneshtml+='<button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="btn btn-warning">Descargar</button>';
     //Fin accordion
-    botones.innerHTML+='</div></div></div></div>'
+    botoneshtml+='</div></div></div></div>';
+
+    botones=botoneshtml;
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
  //document.getElementById('botones').innerHTML+='</div><h2>Hola Div</h2>';
     
-    ////////////////////////////////////
- const insertar=botones.innerHTML
- var element = document.createElement('a');
- element.innerText="descargar";
- element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
- element.setAttribute('download', "Log.txt");
-
- element.style.display = 'none';
- document.body.appendChild(element);
-
- //element.click();
-
- //document.body.removeChild(element);
-
-
-
- //////////////////////////////////
+  
   
   }
   )
