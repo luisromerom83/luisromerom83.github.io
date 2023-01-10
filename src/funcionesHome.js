@@ -21,7 +21,7 @@ function myFunction() {
     //document.getElementById("respuesta").innerHTML = Http.responseText;
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
-  
+      document.getElementById('botones').innerHTML='';
   resp.data.movies[index].torrents.forEach((element,indexT)=>
   {
     
