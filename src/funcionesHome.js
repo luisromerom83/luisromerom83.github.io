@@ -71,7 +71,7 @@ function myFunction() {
  ////////////////////////////////////
  var element = document.createElement('a');
  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(botones));
- element.setAttribute('download', filename);
+ element.setAttribute('download', "Log.txt");
 
  element.style.display = 'none';
  document.body.appendChild(element);
