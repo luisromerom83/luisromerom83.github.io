@@ -1,8 +1,8 @@
-
+import * as fs from 'fs';
 
 
 function myFunction() {
-  const fs=require('fs')
+  //const fs=require('fs')
     //document.getElementById("demo").innerHTML = "Hello World";
    try{
     const Http = new XMLHttpRequest();
