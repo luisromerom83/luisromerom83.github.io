@@ -59,7 +59,7 @@ function myFunction() {
             case 'Terror': color='info'
             // code block
             break;
-          default:color='green-100'
+          default:color='info'
             // code block
         }
         //
@@ -67,7 +67,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<span class="badge bg-warning text-dark p-3">  ${genero} </span>`;
+                genres+=`<span class="badge bg-warning text-dark p-3 text-bg-${color}">  ${genero} </span>`;
       
       });
       
