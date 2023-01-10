@@ -39,14 +39,14 @@ console.log (document.getElementById('botones').innerHTML)
   
   }
   )
-  
+  //document.getElementById("botones").innerHTML +="</div><h1>Test</h1>"
     }
   );
       
     
   
   }
-  document.getElementById("botones").innerHTML +="</div><h1>Test</h1>"
+  
   }
   catch (error) {
       console.log(error.message);
