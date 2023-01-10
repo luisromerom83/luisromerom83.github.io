@@ -53,8 +53,7 @@ function myFunction() {
   
   }
   )
-  if (index===0)
-console.log (document.getElementById('botones').innerHTML)  
+  
     }
   );
       
@@ -67,6 +66,7 @@ console.log (document.getElementById('botones').innerHTML)
       console.log(error.message);
     }
   
+  console.log("Intenta escribir archivo")  
   fs.writeFile('/home/jromero/log.txt',botones,(err)=>{
     if (err) {
       console.log("Falló al escribir el archivo");  
