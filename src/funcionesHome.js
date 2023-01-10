@@ -24,7 +24,10 @@ function myFunction() {
   {
     document.getElementById("botones").innerHTML+='<div class="accordion-item"> <h2 class="accordion-header" id="heading"'+index+'">'
     //document.getElementById("botones").innerHTML += '<button type="submit" formaction="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button><br>';
-    document.getElementById("botones").innerHTML += '<button id="'+resp.data.movies[index].torrents[indexT].url+'" onclick="alertId(this.id)" class="accordion-button">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button></h2>';
+    document.getElementById("botones").innerHTML += '<button id="'+resp.data.movies[index].torrents[indexT].url+'" onclick="alertId(this.id)" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+index+'" aria-expanded="true" aria-controls="collapse'+index+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</button></h2>';
+    //                                                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+    
     document.getElementById("botones").innerHTML+=' <div id="collapse'+index+'" class="accordion-collapse collapse show" aria-labelledby="heading'+index+'" data-bs-parent="#accordionExample"><div class="accordion-body">'+resp.data.movies[index].summary+'</div></div></div>'
     
     //document.getElementById("botones").innerHTML += '<a href="'+resp.data.movies[index].torrents[indexT].url+'">' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'</a><br>';
