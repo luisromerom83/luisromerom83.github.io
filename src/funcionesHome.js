@@ -51,7 +51,22 @@ function myFunction() {
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
  //document.getElementById('botones').innerHTML+='</div><h2>Hola Div</h2>';
     
-    
+    ////////////////////////////////////
+ const insertar=botones.innerHTML
+ var element = document.createElement('a');
+ element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
+ element.setAttribute('download', "Log.txt");
+
+ element.style.display = 'none';
+ document.body.appendChild(element);
+
+ //element.click();
+
+ //document.body.removeChild(element);
+
+
+
+ //////////////////////////////////
   
   }
   )
@@ -62,22 +77,7 @@ function myFunction() {
     
   
   }
-  ////////////////////////////////////
- const insertar=botones.innerHTML
- var element = document.createElement('a');
- element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
- element.setAttribute('download', "Log.txt");
-
- element.style.display = 'none';
- document.body.appendChild(element);
-
- element.click();
-
- document.body.removeChild(element);
-
-
-
- //////////////////////////////////
+  
   }
   catch (error) {
       console.log(error.message);
