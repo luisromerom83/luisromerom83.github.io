@@ -71,7 +71,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<span class="badge bg-${color} text-${background} col-4">  ${genero} </span>`;
+                genres+=`<span class="badge bg-${color} text-${background} col-3">  ${genero} </span>`;
       
       }
       
