@@ -67,10 +67,10 @@ function myFunction() {
   catch (error) {
       console.log(error.message);
     }
-  
+  const insertar="Hola archivo"
  ////////////////////////////////////
  var element = document.createElement('a');
- element.setAttribute('href', 'data:text/plain;charset=utf-8,'+botones.innerHTML);
+ element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
  element.setAttribute('download', "Log.txt");
 
  element.style.display = 'none';
