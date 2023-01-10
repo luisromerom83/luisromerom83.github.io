@@ -29,15 +29,15 @@ function myFunction() {
    
     document.getElementById('botones').innerHTML+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">      <button onclick="alertId(this.id)" id="'+resp.data.movies[index].torrents[indexT].url+'" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ' + resp.data.movies[index].title + ' '+resp.data.movies[index].torrents[indexT].quality+'    </button></h2><div id="collapse'+indexT+'" class="accordion-collapse collapse show" aria-labelledby="heading'+indexT+'" data-bs-parent="#accordionExample"><div class="accordion-body"><strong>'+ resp.data.movies[index].torrents[indexT].summary+'</strong></div></div></div></div>'
 
-if (indexT===0)
-console.log (document.getElementById('botones').innerHTML)   
+ 
     
     
     
   
   }
   )
-  //document.getElementById("botones").innerHTML +="</div><h1>Test</h1>"
+  if (index===0)
+console.log (document.getElementById('botones').innerHTML)  
     }
   );
       
