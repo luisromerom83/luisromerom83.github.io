@@ -62,13 +62,8 @@ function myFunction() {
     
   
   }
-  
-  }
-  catch (error) {
-      console.log(error.message);
-    }
-  const insertar="Hola archivo"
- ////////////////////////////////////
+  ////////////////////////////////////
+ const insertar=botones.innerHTML
  var element = document.createElement('a');
  element.setAttribute('href', 'data:text/plain;charset=utf-8,'+insertar);
  element.setAttribute('download', "Log.txt");
@@ -83,6 +78,12 @@ function myFunction() {
 
 
  //////////////////////////////////
+  }
+  catch (error) {
+      console.log(error.message);
+    }
+  
+ 
   }
   
   function alertId(id){
