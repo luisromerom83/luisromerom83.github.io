@@ -36,7 +36,7 @@ function myFunction() {
       let genres="";
       resp.data.movies[index].genres.forEach((element,indexG)=>{
         let genero=resp.data.movies[index].genres[indexG].Value;
-        genres+=`<span class="badge text-bg-primary"> ${genero} </span>`;
+                genres+=`<span class="badge text-bg-primary"> ${genero} </span>`;
       
       });
       
