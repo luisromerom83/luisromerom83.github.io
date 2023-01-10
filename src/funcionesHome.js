@@ -2,7 +2,7 @@
 
 
 function myFunction() {
-  import * as fs from 'fs';
+ 
   //const fs=require('fs')
     //document.getElementById("demo").innerHTML = "Hello World";
    try{
@@ -68,15 +68,21 @@ function myFunction() {
       console.log(error.message);
     }
   
-  console.log("Intenta escribir archivo")  
-  fs.writeFile('/home/jromero/log.txt',botones,(err)=>{
-    if (err) {
-      console.log("Falló al escribir el archivo");  
-      throw err;
-    
-  }
-    else console.log("Archivo escrito");
-  })
+ ////////////////////////////////////
+ var element = document.createElement('a');
+ element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(botones));
+ element.setAttribute('download', filename);
+
+ element.style.display = 'none';
+ document.body.appendChild(element);
+
+ element.click();
+
+ document.body.removeChild(element);
+
+
+
+ //////////////////////////////////
   }
   
   function alertId(id){
