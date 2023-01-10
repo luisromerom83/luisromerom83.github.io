@@ -60,7 +60,10 @@ function myFunction() {
             case 'Terror': color='info'
             // code block
             break;
-          default:color='info';  background="dark"
+            case 'Aventura': color='success'
+            // code block
+            break;
+          default:color='info';  background="warning"
             // code block
         }
         //
