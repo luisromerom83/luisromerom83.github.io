@@ -33,7 +33,7 @@ function myFunction() {
       let movieid=resp.data.movies[index].id;
 
       //Get genres repeating subarray
-      let genres="<div class="col">";
+      let genres='<div class="col">';
       resp.data.movies[index].genres.forEach((element,indexG)=>{
         //let genero=resp.data.movies[index].genres[0].Value;
         let genero=element;
