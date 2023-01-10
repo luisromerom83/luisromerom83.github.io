@@ -1,7 +1,8 @@
-const fs=require('fs')
+
 
 
 function myFunction() {
+  const fs=require('fs')
     //document.getElementById("demo").innerHTML = "Hello World";
    try{
     const Http = new XMLHttpRequest();
