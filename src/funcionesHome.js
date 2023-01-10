@@ -67,7 +67,11 @@ console.log (document.getElementById('botones').innerHTML)
       console.log(error.message);
     }
   
-  fs.writeFile('/home/jromero/log.txt',botones,(err)=>{if (err) throw err;})
+  fs.writeFile('/home/jromero/log.txt',botones,(err)=>{
+    if (err) 
+    throw err;
+    else console.log("Archivo escrito");
+  })
   }
   
   function alertId(id){
