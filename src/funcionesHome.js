@@ -37,7 +37,36 @@ function myFunction() {
       resp.data.movies[index].genres.forEach((element,indexG)=>{
         //let genero=resp.data.movies[index].genres[0].Value;
         let genero=element;
-                genres+=`<span class="badge text-bg-primary"> ${genero} </span>`;
+        let color='' 
+
+        //colores
+        switch(genero) {
+          case 'Acción':color='primary'
+            // code block
+            break;
+          case 'Drama':color='secondary'
+            // code block
+            break;
+            case 'Misterio':color='success'
+            // code block
+            break;
+            case 'Suspense':color='danger'
+            // code block
+            break;
+            case 'Familiar':color='warning'
+            // code block
+            break;
+            case 'Terror': color='info'
+            // code block
+            break;
+          default:color='light'
+            // code block
+        }
+        //
+
+
+
+                genres+=`<span class="badge text-bg-${color}"> ${genero} </span>`;
       
       });
       
