@@ -41,32 +41,32 @@ function myFunction() {
 
         //colores
         switch(genero) {
-          case 'Acción':color='primary'
+          case 'Acción':color='bg-primary'
             // code block
             break;
-          case 'Drama':color='secondary'
+          case 'Drama':color='bg-secondary'
             // code block
             break;
-            case 'Misterio':color='success'
+            case 'Misterio':color='bg-success'
             // code block
             break;
-            case 'Suspense':color='danger'
+            case 'Suspense':color='bg-danger'
             // code block
             break;
-            case 'Familiar':color='warning'
+            case 'Familiar':color='bg-warning'
             // code block
             break;
-            case 'Terror': color='info'
+            case 'Terror': color='bg-info'
             // code block
             break;
-          default:color='primary-bg-subtle'
+          default:color='primary-emphasis'
             // code block
         }
         //
 
 
 
-                genres+=`<span class="badge bg-${color}"> ${genero} </span>`;
+                genres+=`<span class="badge text-${color}"> ${genero} </span>`;
       
       });
       
