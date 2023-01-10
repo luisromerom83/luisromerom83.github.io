@@ -27,15 +27,15 @@ function myFunction() {
     let botoneshtml='';
     const resp=JSON.parse(Http.responseText)
     resp.data.movies.forEach((element,index) => {
-      
+      //Inicio accordion
+    botoneshtml+='<div class="accordion" id="accordionExample">';
   resp.data.movies[index].torrents.forEach((element,indexT)=>
   {
     
     
    
-    //Inicio accordion
-    botoneshtml+='<div class="accordion" id="accordionExample">';
-    //Inicio Header
+    
+    //Inicio Items
     botoneshtml+='<div class="accordion-item"> <h2 class="accordion-header" id="heading'+indexT+'">';
     //Botón header
     botoneshtml+='<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'+indexT+'" aria-expanded="false" aria-controls="collapse'+indexT+'">  ';
@@ -50,7 +50,7 @@ function myFunction() {
     //Fin accordion
     botoneshtml+='</div></div></div></div>';
 
-    botones.innerHTML=botoneshtml;
+    
  //if ((index+1)==resp.data.movies.length && (indexT+1)==resp.data.movies[index].torrents.length)
  //document.getElementById('botones').innerHTML+='</div><h2>Hola Div</h2>';
     
@@ -58,7 +58,8 @@ function myFunction() {
   
   }
   )
-  
+  botoneshtml+='</div>';
+  botones.innerHTML=botoneshtml;
     }
   );
       
