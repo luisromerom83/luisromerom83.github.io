@@ -1,4 +1,13 @@
 
+var input = document.getElementById("movie");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("buscar").click();
+  }
+});
+
+
 
 
 function myFunction() {
