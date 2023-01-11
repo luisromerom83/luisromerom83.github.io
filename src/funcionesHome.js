@@ -80,7 +80,7 @@ function myFunction() {
 
 
                 //genres+=`<span class="badge text-bg-${color}" bg-warning> ${genero} </span>`;
-                genres+=`<span class="badge bg-${color} text-${background} col-2">  ${genero} </span>`;
+                genres+=`<div col><span class="badge bg-${color} text-${background} ">  ${genero} </span></div>`;
       
       }
       
@@ -89,7 +89,7 @@ function myFunction() {
       //Inicio accordion
     botoneshtml+='<div class="accordion" id="accordionExample">';
     //ROW
-    botoneshtml+='<div class="row align-items-start">'
+    botoneshtml+='<div class="row align-items-start gx-5">'
     //Inicio Items
     botoneshtml+='<div class="accordion-item col-10" > <h2 class="accordion-header" id="heading'+movieid+'">';
     //Botón header
